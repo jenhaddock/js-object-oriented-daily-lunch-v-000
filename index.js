@@ -94,7 +94,7 @@ class Employer {
   }
   deliveries(){
     return this.employees().map(function(employee){
-      return employee.customer()
+      return employee.deliveries()
     })
   }
   meals(){
