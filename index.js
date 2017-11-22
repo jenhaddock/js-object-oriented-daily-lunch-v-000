@@ -89,7 +89,7 @@ class Employer {
   }
   employees(){
     return store.customers.find(function(customer){
-      return customer.id === this.customerId
+      return customer.employerId === this.Id
     }.bind(this))
   }
 }
