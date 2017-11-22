@@ -93,7 +93,7 @@ class Employer {
     }.bind(this))
   }
   deliveries(){
-    return this.employees().map(function(employee){
+    return this.employees().map(function(customer){
       return delivery.customer()
     })
   }
