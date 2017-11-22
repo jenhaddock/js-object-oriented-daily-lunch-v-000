@@ -102,6 +102,6 @@ class Employer {
     let allMeals = this.employees().map(function(employee){
       return employee.meals()
     })
-    return [].concat.apply([], allMeals);
+    return [...new Set(allMeals)];
   }
 }
