@@ -92,4 +92,15 @@ class Employer {
       return customer.employerId === this.id;
     }.bind(this))
   }
+  deliveries(){
+    return this.employees().map(function(employee){
+      return delivery.employee()
+    })
+  }
+  delimealsveries(){
+    return this.employees().map(function(employee){
+      return meal.employee()
+    })
+  }
 }
+
