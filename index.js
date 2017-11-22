@@ -88,7 +88,7 @@ class Employer {
     store.employers.push(this);
   }
   employees(){
-    return store.customers.find(function(customer){
+    return store.customers.filter(function(customer){
       return customer.employerId === this.id;
     }.bind(this))
   }
@@ -97,10 +97,9 @@ class Employer {
       return delivery.employee()
     })
   }
-  delimealsveries(){
+  meals(){
     return this.employees().map(function(employee){
       return meal.employee()
     })
   }
 }
-
