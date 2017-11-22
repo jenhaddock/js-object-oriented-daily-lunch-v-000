@@ -100,8 +100,23 @@ class Employer {
   }
   meals(){
     let allMeals = this.deliveries().map(function(delivery){
-      return delivery.meal()
+      return delivery.meal();
     })
     return [...new Set(allMeals)]
+  }
+  mealTotals(){
+    let allMeals = this.deliveries().map(function(delivery){
+      return delivery.meal();
+    })
+
+    let mealTotal = {};
+
+    allMeals.forEach(function(meal){
+      if (mealTotal[meal.id]{
+        mealTotal[meal.id] +=1;
+      } else {
+        mealTotal[meal.id] = 1;
+      })
+    })
   }
 }
