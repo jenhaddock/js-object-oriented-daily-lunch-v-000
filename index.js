@@ -93,9 +93,10 @@ class Employer {
     }.bind(this))
   }
   deliveries(){
-    return this.employees().map(function(employee){
+    let allDeliveries = this.employees().map(function(employee){
       return employee.deliveries()
     })
+    return [].concat.apply([], allDeliveries);
   }
   meals(){
     return this.employees().map(function(employee){
