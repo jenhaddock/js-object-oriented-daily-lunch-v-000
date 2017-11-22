@@ -12,15 +12,15 @@ class Customer {
 
     store.customers.push(this);
   }
-  meals(){
-    return store.meals.filter(function(mealMatch){
-      return mealMatch.customerId === this.id
-    }.bind(this))
-  }
   deliveries(){
     return store.deliveries.filter(function(deliveryMatch){
       return deliveryMatch.customerId === this.id
     }.bind(this))
+  }
+  meals(){
+    return this.deliveries().map(function(delivery){
+      return delivery.meal()
+    })
   }
 }
 
