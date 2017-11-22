@@ -99,9 +99,9 @@ class Employer {
     return [].concat.apply([], allDeliveries);
   }
   meals(){
-    let allMeals = this.employees().map(function(employee){
-      return employee.meals()
+    let allMeals = this.deliveries().map(function(delivery){
+      return delivery.meal()
     })
-    return [...new Set(allMeals)];
+    return [...new Set(allMeals)]
   }
 }
