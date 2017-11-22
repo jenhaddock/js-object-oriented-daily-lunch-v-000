@@ -49,6 +49,11 @@ class Meal {
       return deliveryMatch.customer()
     })
   }
+  static byPrice(){
+    return array.slice().sort(a, b) => {
+      return a.price - b.price;
+    }
+  }
 }
 
 class Delivery {
