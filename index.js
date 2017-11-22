@@ -50,9 +50,9 @@ class Meal {
     })
   }
   static byPrice(){
-    return array.slice().sort(a, b) => {
-      return a.price - b.price;
-    }
+//    return array.slice().sort(a, b) => {
+  //    return a.price - b.price;
+  //  }
   }
 }
 
