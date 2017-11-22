@@ -5,10 +5,12 @@ let employerId = 0;
 let store = {customers: [], meals: [], deliveries: [], employers: []};
 
 class Customer {
-  constructor(name, employerId){
+  constructor(name, employer){
     this.id = ++customerId;
     this.name = name;
-    this.employerId = employerId;
+    if (employer){
+      this.employerId = employer.id
+    }
 
     store.customers.push(this);
   }
@@ -45,13 +47,13 @@ class Meal {
 }
 
 class Delivery {
-  constructor(mealId, customerId){
+  constructor(meal, customer){
     this.id = ++deliveryId;
-    if(mealId){
-      this.mealId = mealId;
+    if(meal){
+      this.mealId = meal.id;
     }
-    if(customerId){
-      this.customerId = customerId;
+    if(customer){
+      this.customerId = customer.id;
     }
 
     store.deliveries.push(this);
