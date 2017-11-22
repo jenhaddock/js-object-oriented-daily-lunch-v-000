@@ -112,11 +112,12 @@ class Employer {
     let mealTotal = {};
 
     allMeals.forEach(function(meal){
-    //  if (mealTotal[meal.id]{
-      //  mealTotal[meal.id] +=1;
-      //} else {
-      //  mealTotal[meal.id] = 1;
-    //  })
+      if (mealTotal[meal.id]){
+        mealTotal[meal.id] +=1;
+      } else {
+        mealTotal[meal.id] = 1;
+      }
     })
+    return mealTotal;
   }
 }
